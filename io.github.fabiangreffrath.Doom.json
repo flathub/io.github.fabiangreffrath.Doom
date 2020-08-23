@@ -18,12 +18,18 @@
         {
             "name": "crispy-doom",
             "buildsystem": "autotools",
+            "config-opts": [
+                "--disable-bash-completion",
+                "--disable-doc",
+                "--disable-fonts",
+                "--disable-icons"
+            ],
             "sources": [
                 {
                     "type": "git",
                     "url": "https://github.com/fabiangreffrath/crispy-doom.git",
-                    "tag": "crispy-doom-5.8.0",
-                    "commit": "a87c2f73392099179c88143c0bc2d019fb456cdd"
+                    "tag": "crispy-doom-5.9.0",
+                    "commit": "9d0d5d0ba67eee2e435c9cd2ba505304baf76e52"
                 },
                 {
                     "type": "patch",
