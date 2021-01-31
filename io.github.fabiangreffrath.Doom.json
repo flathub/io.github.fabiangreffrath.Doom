@@ -28,19 +28,24 @@
                 {
                     "type": "git",
                     "url": "https://github.com/fabiangreffrath/crispy-doom.git",
-                    "tag": "crispy-doom-5.9.2",
-                    "commit": "5b68f4bf9ad29b5621df7a51d4b1aa9754e50ed1"
+                    "tag": "crispy-doom-5.10.0",
+                    "commit": "fc36abdf8b55ec757344b274e227ceabf4025d63"
                 },
                 {
                     "type": "patch",
                     "path": "metainfo.patch"
                 }
             ],
+            "post-install": [
+                "mv /app/share/applications/io.github.fabiangreffrath.Heretic.desktop /app/share/applications/io.github.fabiangreffrath.Doom.Heretic.desktop",
+                "sed -i 's/Icon=crispy-doom/Icon=io.github.fabiangreffrath.Doom/' /app/share/applications/io.github.fabiangreffrath.Doom.Heretic.desktop",
+                "mv /app/share/applications/io.github.fabiangreffrath.Setup.desktop /app/share/applications/io.github.fabiangreffrath.Doom.Setup.desktop",
+                "sed -i 's/Icon=crispy-setup/Icon=io.github.fabiangreffrath.Doom.Setup/' /app/share/applications/io.github.fabiangreffrath.Doom.Setup.desktop",
+                "sed -i 's/Exec=crispy-setup/Exec=crispy-doom-setup/' /app/share/applications/io.github.fabiangreffrath.Doom.Setup.desktop",
+                "mv /app/share/icons/hicolor/128x128/apps/crispy-setup.png /app/share/icons/hicolor/128x128/apps/io.github.fabiangreffrath.Doom.Setup.png"
+            ],
             "cleanup": [
                 "/share/applications/screensavers",
-                "/share/applications/io.github.fabiangreffrath.Heretic.desktop",
-                "/share/applications/io.github.fabiangreffrath.Setup.desktop",
-                "/share/icons/hicolor/128x128/apps/crispy-setup.png",
                 "/share/metainfo/io.github.fabiangreffrath.Heretic.metainfo.xml"
             ]
         }
