@@ -36,11 +36,16 @@
                     "path": "metainfo.patch"
                 }
             ],
+            "post-install": [
+                "mv /app/share/applications/io.github.fabiangreffrath.Heretic.desktop /app/share/applications/io.github.fabiangreffrath.Doom.Heretic.desktop",
+                "sed -i 's/Icon=crispy-doom/Icon=io.github.fabiangreffrath.Doom/' /app/share/applications/io.github.fabiangreffrath.Doom.Heretic.desktop",
+                "mv /app/share/applications/io.github.fabiangreffrath.Setup.desktop /app/share/applications/io.github.fabiangreffrath.Doom.Setup.desktop",
+                "sed -i 's/Icon=crispy-setup/Icon=io.github.fabiangreffrath.Doom.Setup/' /app/share/applications/io.github.fabiangreffrath.Doom.Setup.desktop",
+                "sed -i 's/Exec=crispy-setup/Exec=crispy-doom-setup/' /app/share/applications/io.github.fabiangreffrath.Doom.Setup.desktop",
+                "mv /app/share/icons/hicolor/128x128/apps/crispy-setup.png /app/share/icons/hicolor/128x128/apps/io.github.fabiangreffrath.Doom.Setup.png"
+            ],
             "cleanup": [
                 "/share/applications/screensavers",
-                "/share/applications/io.github.fabiangreffrath.Heretic.desktop",
-                "/share/applications/io.github.fabiangreffrath.Setup.desktop",
-                "/share/icons/hicolor/128x128/apps/crispy-setup.png",
                 "/share/metainfo/io.github.fabiangreffrath.Heretic.metainfo.xml"
             ]
         }
