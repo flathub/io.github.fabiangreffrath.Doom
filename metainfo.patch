@@ -18,7 +18,7 @@
    </description>
    <screenshots>
      <screenshot type="default">
-@@ -44,4 +55,19 @@
+@@ -44,4 +55,20 @@
        <caption>Doom the Way id Did, on Freedoom. Level 3-2: City of Corpses</caption>
      </screenshot>
    </screenshots>
@@ -30,6 +30,7 @@
 +    <content_attribute id="social-chat">intense</content_attribute>
 +  </content_rating>
 +  <releases>
++    <release version="5.11.1" date="2022-02-10"/>
 +    <release version="5.10.3" date="2021-08-17"/>
 +    <release version="5.10.0" date="2021-01-12"/>
 +    <release version="5.9.2" date="2020-09-22"/>

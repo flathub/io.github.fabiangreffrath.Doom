@@ -28,8 +28,8 @@
                 {
                     "type": "git",
                     "url": "https://github.com/fabiangreffrath/crispy-doom.git",
-                    "tag": "crispy-doom-5.10.3",
-                    "commit": "2857014c96c5f2f0c9784ae43ec024ad8d398fd0"
+                    "tag": "crispy-doom-5.11.1",
+                    "commit": "234b12e423e8272ec0a440d2dea0167771bd78bc"
                 },
                 {
                     "type": "patch",
