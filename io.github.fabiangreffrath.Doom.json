@@ -62,7 +62,10 @@
                 "sed -i 's/Icon=crispy-heretic/Icon=io.github.fabiangreffrath.Doom.Heretic/' /app/share/applications/io.github.fabiangreffrath.Doom.Heretic.desktop",
                 "mv /app/share/icons/hicolor/128x128/apps/crispy-hexen.png /app/share/icons/hicolor/128x128/apps/io.github.fabiangreffrath.Doom.Hexen.png",
                 "mv /app/share/applications/io.github.fabiangreffrath.Hexen.desktop /app/share/applications/io.github.fabiangreffrath.Doom.Hexen.desktop",
-                "sed -i 's/Icon=crispy-hexen/Icon=io.github.fabiangreffrath.Doom.Hexen/' /app/share/applications/io.github.fabiangreffrath.Doom.Hexen.desktop"
+                "sed -i 's/Icon=crispy-hexen/Icon=io.github.fabiangreffrath.Doom.Hexen/' /app/share/applications/io.github.fabiangreffrath.Doom.Hexen.desktop",
+                "mv /app/share/icons/hicolor/128x128/apps/crispy-strife.png /app/share/icons/hicolor/128x128/apps/io.github.fabiangreffrath.Doom.Strife.png",
+                "mv /app/share/applications/io.github.fabiangreffrath.Strife.desktop /app/share/applications/io.github.fabiangreffrath.Doom.Strife.desktop",
+                "sed -i 's/Icon=crispy-strife/Icon=io.github.fabiangreffrath.Doom.Strife/' /app/share/applications/io.github.fabiangreffrath.Doom.Strife.desktop"
             ],
             "cleanup": [
                 "/share/applications/screensavers",
