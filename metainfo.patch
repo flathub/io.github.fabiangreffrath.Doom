@@ -18,7 +18,7 @@
    </description>
    <screenshots>
      <screenshot type="default">
-@@ -52,11 +63,14 @@
+@@ -52,11 +63,15 @@
      <content_attribute id="social-chat">intense</content_attribute>
    </content_rating>
    <releases>
