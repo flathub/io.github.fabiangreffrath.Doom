@@ -1,5 +1,12 @@
 --- a/src/Doom.metainfo.xml.in
 +++ b/src/Doom.metainfo.xml.in
+@@ -2,5 +2,6 @@
+ <component type="desktop">
+   <id>@PACKAGE_RDNS@.Doom</id>
++  <launchable type="desktop-id">@PACKAGE_RDNS@.Doom.desktop</launchable>
+   <name>@PACKAGE_SHORTNAME@ Doom</name>
+   <summary>@PACKAGE_SHORTDESC@</summary>
+   <metadata_license>CC0-1.0</metadata_license>
 @@ -25,6 +25,17 @@
        network stack, allowing it to function on modern LANs and the
        Internet.
