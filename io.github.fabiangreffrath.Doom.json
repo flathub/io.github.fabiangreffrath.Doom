@@ -1,7 +1,7 @@
 {
     "app-id": "io.github.fabiangreffrath.Doom",
     "runtime": "org.freedesktop.Platform",
-    "runtime-version": "23.08",
+    "runtime-version": "24.08",
     "sdk": "org.freedesktop.Sdk",
     "command": "crispy-doom",
     "finish-args": [
@@ -27,8 +27,8 @@
                 {
                     "type": "git",
                     "url": "https://github.com/fabiangreffrath/crispy-doom.git",
-                    "tag": "crispy-doom-7.0",
-                    "commit": "84fa41b790488b7e0e2e8a5f56c4c462fbaddada"
+                    "tag": "crispy-doom-7.1",
+                    "commit": "0a022e0ee6c74d9bab173ed9ee5212312e90ce3a"
                 },
                 {
                     "type": "patch",
