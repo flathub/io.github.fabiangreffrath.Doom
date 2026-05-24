@@ -1,7 +1,7 @@
 {
     "app-id": "io.github.fabiangreffrath.Doom",
     "runtime": "org.freedesktop.Platform",
-    "runtime-version": "24.08",
+    "runtime-version": "25.08",
     "sdk": "org.freedesktop.Sdk",
     "command": "crispy-doom",
     "finish-args": [
@@ -23,6 +23,28 @@
                 "--disable-fonts",
                 "--disable-icons"
             ],
+            "post-install": [
+                "mv /app/share/icons/hicolor/128x128/apps/crispy-setup.png /app/share/icons/hicolor/128x128/apps/${FLATPAK_ID}.Setup.png",
+                "mv /app/share/icons/hicolor/128x128/apps/crispy-heretic.png /app/share/icons/hicolor/128x128/apps/${FLATPAK_ID}.Heretic.png",
+                "mv /app/share/icons/hicolor/128x128/apps/crispy-hexen.png /app/share/icons/hicolor/128x128/apps/${FLATPAK_ID}.Hexen.png",
+                "mv /app/share/icons/hicolor/128x128/apps/crispy-strife.png /app/share/icons/hicolor/128x128/apps/${FLATPAK_ID}.Strife.png",
+                "mv /app/share/applications/io.github.fabiangreffrath.Setup.desktop /app/share/applications/${FLATPAK_ID}.Setup.desktop",
+                "mv /app/share/applications/io.github.fabiangreffrath.Heretic.desktop /app/share/applications/${FLATPAK_ID}.Heretic.desktop",
+                "mv /app/share/applications/io.github.fabiangreffrath.Hexen.desktop /app/share/applications/${FLATPAK_ID}.Hexen.desktop",
+                "mv /app/share/applications/io.github.fabiangreffrath.Strife.desktop /app/share/applications/${FLATPAK_ID}.Strife.desktop",
+                "desktop-file-edit --set-key=Exec --set-value=crispy-doom-setup /app/share/applications/${FLATPAK_ID}.Setup.desktop",
+                "desktop-file-edit --set-icon=${FLATPAK_ID}.Setup /app/share/applications/${FLATPAK_ID}.Setup.desktop",
+                "desktop-file-edit --set-icon=${FLATPAK_ID}.Heretic /app/share/applications/${FLATPAK_ID}.Heretic.desktop",
+                "desktop-file-edit --set-icon=${FLATPAK_ID}.Hexen /app/share/applications/${FLATPAK_ID}.Hexen.desktop",
+                "desktop-file-edit --set-icon=${FLATPAK_ID}.Strife /app/share/applications/${FLATPAK_ID}.Strife.desktop"
+            ],
+            "cleanup": [
+                "/share/applications/screensavers",
+                "/share/doc",
+                "/share/metainfo/io.github.fabiangreffrath.Heretic.metainfo.xml",
+                "/share/metainfo/io.github.fabiangreffrath.Hexen.metainfo.xml",
+                "/share/metainfo/io.github.fabiangreffrath.Strife.metainfo.xml"
+            ],
             "sources": [
                 {
                     "type": "git",
@@ -34,27 +56,6 @@
                     "type": "patch",
                     "path": "metainfo.patch"
                 }
-            ],
-            "post-install": [
-                "mv /app/share/icons/hicolor/128x128/apps/crispy-setup.png /app/share/icons/hicolor/128x128/apps/io.github.fabiangreffrath.Doom.Setup.png",
-                "mv /app/share/applications/io.github.fabiangreffrath.Setup.desktop /app/share/applications/io.github.fabiangreffrath.Doom.Setup.desktop",
-                "sed -i 's/Exec=crispy-setup/Exec=crispy-doom-setup/' /app/share/applications/io.github.fabiangreffrath.Doom.Setup.desktop",
-                "sed -i 's/Icon=crispy-setup/Icon=io.github.fabiangreffrath.Doom.Setup/' /app/share/applications/io.github.fabiangreffrath.Doom.Setup.desktop",
-                "mv /app/share/icons/hicolor/128x128/apps/crispy-heretic.png /app/share/icons/hicolor/128x128/apps/io.github.fabiangreffrath.Doom.Heretic.png",
-                "mv /app/share/applications/io.github.fabiangreffrath.Heretic.desktop /app/share/applications/io.github.fabiangreffrath.Doom.Heretic.desktop",
-                "sed -i 's/Icon=crispy-heretic/Icon=io.github.fabiangreffrath.Doom.Heretic/' /app/share/applications/io.github.fabiangreffrath.Doom.Heretic.desktop",
-                "mv /app/share/icons/hicolor/128x128/apps/crispy-hexen.png /app/share/icons/hicolor/128x128/apps/io.github.fabiangreffrath.Doom.Hexen.png",
-                "mv /app/share/applications/io.github.fabiangreffrath.Hexen.desktop /app/share/applications/io.github.fabiangreffrath.Doom.Hexen.desktop",
-                "sed -i 's/Icon=crispy-hexen/Icon=io.github.fabiangreffrath.Doom.Hexen/' /app/share/applications/io.github.fabiangreffrath.Doom.Hexen.desktop",
-                "mv /app/share/icons/hicolor/128x128/apps/crispy-strife.png /app/share/icons/hicolor/128x128/apps/io.github.fabiangreffrath.Doom.Strife.png",
-                "mv /app/share/applications/io.github.fabiangreffrath.Strife.desktop /app/share/applications/io.github.fabiangreffrath.Doom.Strife.desktop",
-                "sed -i 's/Icon=crispy-strife/Icon=io.github.fabiangreffrath.Doom.Strife/' /app/share/applications/io.github.fabiangreffrath.Doom.Strife.desktop"
-            ],
-            "cleanup": [
-                "/share/applications/screensavers",
-                "/share/metainfo/io.github.fabiangreffrath.Heretic.metainfo.xml",
-                "/share/metainfo/io.github.fabiangreffrath.Hexen.metainfo.xml",
-                "/share/metainfo/io.github.fabiangreffrath.Strife.metainfo.xml"
             ]
         }
     ]
